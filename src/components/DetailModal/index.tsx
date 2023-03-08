@@ -16,6 +16,10 @@ const DetailModal = () => {
     const handleClose = () => {
         setModalShow(false);
     }
+    const handleBuyNFT = () => {
+        window.open(`https://opensea.io/assets/ethereum/${selectedNFT?.contractAddress}/${selectedNFT?.tokenId}`,'_blank');
+        setModalShow(false);
+    }
 
     return (
         <Modal show={modalShow} backdrop="static" keyboard={false} aria-labelledby="contained-modal-title-vcenter" centered>
@@ -47,7 +51,7 @@ const DetailModal = () => {
                 </Form.Text>
             </Modal.Body>
             <Modal.Footer>
-                <Button className='btn-buy' onClick={handleClose}>
+                <Button className='btn-buy' onClick={handleBuyNFT}>
                     Buy NFT
                 </Button>
                 <Button variant='secondary' onClick={handleClose}>

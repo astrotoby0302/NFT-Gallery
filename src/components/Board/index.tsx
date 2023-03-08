@@ -12,7 +12,7 @@ import { useNfts } from '../../hook';
 import { NFTProps } from '../../utils/constants/interfaces';
 
 const Board = () => {
-    const { nfts, loading, error } = useNfts('0xe4bBCbFf51e61D0D95FcC5016609aC8354B177C4');
+    const { nfts } = useNfts('0xe4bBCbFf51e61D0D95FcC5016609aC8354B177C4');
     useEffect(() => {
         (async () => {
             const { nfts } = await getNfts('0xe4bBCbFf51e61D0D95FcC5016609aC8354B177C4'); //0xbc4ca0eda7647a8ab7c2061c23118a18a936f13d
