@@ -1,0 +1,55 @@
+@import '../../utils/styles/colors';
+
+.card {
+    background-color: #2C2D42!important;
+    box-shadow: 0px 12px 24px rgba(52, 64, 84, 0.1);
+    padding: 10px 30px 40px;
+    transition: all 0.3s linear;
+
+    img {
+        margin-top: -30px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        
+    }
+
+    .nft-title {
+        color: whitesmoke;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .btn-detail {
+        background-color: $btnColor;
+        border: 1px solid $btnColor;
+        font-weight: 600;
+        transition: all 0.3s linear;
+    }
+    .btn-detail:hover {
+        background-color: transparent;
+        border-color: $btnColor;
+        color: $btnColor;
+    }
+}
+
+.card:hover {
+    // transform: translateY(-10px);
+
+    img {
+        animation-name: flip-with-scale;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes flip-with-scale {
+    0% {
+        transform: perspective(400px) scaleX(1);
+    }
+
+    100% {
+        transform: perspective(400px) scaleX(-1);
+    }
+}

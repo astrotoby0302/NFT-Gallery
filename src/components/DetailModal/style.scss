@@ -1,0 +1,48 @@
+@import '../../utils/styles/colors';
+
+.modal-dialog {
+
+    .modal-content {
+        background-color: #212429;
+        background-image: radial-gradient(50% 63% at 50% 30%, #2b0ece -300%, transparent 100%);
+        border: 1px solid $btnColor;
+
+        .modal-header {
+            .modal-title {
+                .nft-title {
+                    color: whitesmoke;
+                }
+            }
+        }
+        .modal-body {
+            img {
+                border-radius: 10px;
+            }
+
+            small {
+                display: block;
+                margin: 0;
+                color: white;
+            }
+
+            .nft-title {
+                font-size: 30px;
+                color: white;
+            }
+
+            .nft-desc {
+                font-size: 30px;
+            }
+
+            .nft-owner {
+                font-size: 18px;
+            }
+        }
+        .modal-footer {
+            .btn-buy {
+                background: $btnColor;
+                border: 1px solid $btnColor;
+            }
+        }
+    }
+}
